@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toxin</title>
+    <link rel="stylesheet" href="/asset/css/style.css">
+    <link rel="stylesheet" href="/asset/css/resize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__wrapper">
+            <div class="header__logo">
+                <a href="index.html" class="header__logo__link"><img src="/asset/img/Logo.svg" alt="" class="header__logo-img logo"></a>
+            </div>
+            <div class="nav__wrapper">
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li class="header__item"><a href="#" class="header__item__link">О нас</a></li>
+                        <li class="header__item"><a href="#" class="header__item__link">Услуги</a></li>
+                        <li class="header__item"><a href="#" class="header__item__link">Вакансии</a></li>
+                        <li class="header__item"><a href="#" class="header__item__link">Новости</a></li>
+                        <li class="header__item"><a href="#" class="header__item__link">Соглашения</a></li>
+                    </ul>
+                </nav>
+                <div class="hamburger-menu">
+                    <input id="menu__toggle" type="checkbox" />
+                    <label class="menu__btn" for="menu__toggle">
+                        <span></span>
+                    </label>
+                    <ul class="menu__box">
+                        <li>
+                            <a class="menu__item" href="#">О нас</a>
+                        </li>
+                        <li>
+                            <a class="menu__item" href="#">Услуги</a>
+                        </li>
+                        <li>
+                            <a class="menu__item" href="#">Вакансии</a>
+                        </li>
+                        <li>
+                            <a class="menu__item" href="#">Новости</a>
+                        </li>
+                        <li>
+                            <a class="menu__item" href="#">Соглашения</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__buttons">
+                    <button class="header__login-btn"><a class="header__login__link">войти</a></button>
+                    <button class="header__logon-btn"><a class="header__login__link">зарегистрироваться</a></button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container section__wrapper">
+        <section class="settings">
+            <div class="input__wrapper">
+                <lable class="input__lable" for="date">даты пребывания в отеле</lable>
+                <input type="text" class="settings__input" id="date" placeholder="Даты пребывания">
+            </div>
+            <div class="input__wrapper">
+                <lable class="input__lable" for="guests">гости</lable>
+                <input type="number" class="settings__input" id="guests" placeholder="Сколько гостей">
+            </div>
+            <div class="price__wrapper">
+                <h2 class="settings__title settings__title-special">диапазон цены</h2>
+                <div class="values">
+                    <span id="range1">
+                        0
+                    </span>
+                    <span> &dash; </span>
+                    <span id="range2">
+                        10000
+                    </span>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="container-slider">
+                    <div class="slider-track"></div>
+                    <input type="range" min="0" max="10000" value="5000" id="slider-1" oninput="slideOne()">
+                    <input type="range" min="0" max="10000" value="10000" id="slider-2" oninput="slideTwo()">
+                </div>
+            </div>
+            <h2 class="settings__title">правила дома</h2>
+            <div class="check-group">
+                <label for="myCheckbox01" class="checkbox">
+                    <input class="checkbox__input" type="checkbox" id="myCheckbox01">
+                    <svg class="checkbox__icon" viewBox="0 0 22 22">
+                        <rect width="21" height="21" x=".5" y=".5" fill="#FFF" stroke="#c3c9d4" rx="3" />
+                        <path class="tick" stroke="#BC9CFF" fill="none" stroke-linecap="round" stroke-width="4" d="M4 10l5 5 9-9" />
+                    </svg>
+                    <span class="checkbox__label">Можно курить</span>
+                </label>
+                <label for="myCheckbox02" class="checkbox">
+                    <input class="checkbox__input" type="checkbox" id="myCheckbox02">
+                    <svg class="checkbox__icon" viewBox="0 0 22 22">
+                        <rect width="21" height="21" x=".5" y=".5" fill="#FFF" stroke="#c3c9d4" rx="3" />
+                        <path class="tick" stroke="#BC9CFF" fill="none" stroke-linecap="round" stroke-width="4" d="M4 10l5 5 9-9" />
+                    </svg>
+                    <span class="checkbox__label">Можно с питомцами</span>
+                </label>
+                <label for="myCheckbox03" class="checkbox">
+                    <input class="checkbox__input" type="checkbox" id="myCheckbox03">
+                    <svg class="checkbox__icon" viewBox="0 0 22 22">
+                        <rect width="21" height="21" x=".5" y=".5" fill="#FFF" stroke="#c3c9d4" rx="3" />
+                        <path class="tick" stroke="#BC9CFF" fill="none" stroke-linecap="round" stroke-width="4" d="M4 10l5 5 9-9" />
+                    </svg>
+                    <span class="checkbox__label">Можно пригласить гостей (до 10 человек)</span>
+                </label>
+            </div>
+            <h2 class="settings__title">доступность</h2>
+            <div class="check-group">
+                <label for="myCheckbox01" class="checkbox">
+                    <input class="checkbox__input" type="checkbox" id="myCheckbox01">
+                    <svg class="checkbox__icon" viewBox="0 0 22 22">
+                        <rect width="21" height="21" x=".5" y=".5" fill="#FFF" stroke="#c3c9d4" rx="3" />
+                        <path class="tick" stroke="#BC9CFF" fill="none" stroke-linecap="round" stroke-width="4" d="M4 10l5 5 9-9" />
+                    </svg>
+                    <span class="checkbox__label">Широкий коридор</span>
+                </label>
+                <label for="myCheckbox02" class="checkbox">
+                    <input class="checkbox__input" type="checkbox" id="myCheckbox02">
+                    <svg class="checkbox__icon" viewBox="0 0 22 22">
+                        <rect width="21" height="21" x=".5" y=".5" fill="#FFF" stroke="#c3c9d4" rx="3" />
+                        <path class="tick" stroke="#BC9CFF" fill="none" stroke-linecap="round" stroke-width="4" d="M4 10l5 5 9-9" />
+                    </svg>
+                    <span class="checkbox__label">Помощник для инвалидов</span>
+                </label>
+            </div>
+        </section>
+        <section class="rooms">
+            <h1 class="rooms__title">Номера, которые мы для вас подобрали</h1>
+            <ul class="rooms__cards">
+                <li class="rooms__card">
+                    <a href="index3.html" class="room__card__link">
+                        <img src="/asset/img/room1.jpg" class="rooms__card__img">
+                        <div class="rooms__card__wrapper">
+                            <h2 class="rooms__card__number">№888</h2>
+                            <h2 class="rooms__card__price">9 990₽ в сутки</h2>
+
+                            <img src="/asset/img/5star.png" class="stars">
+                            <h2 class="rooms__card__feedback">145 Отзывов</h2>
+                        </div>
+                    </a>
+                </li>
+                <li class="rooms__card">
+                    <img src="/asset/img/image2.png" class="rooms__card__img">
+                    <div class="rooms__card__wrapper">
+                        <h2 class="rooms__card__number">№840</h2>
+                        <h2 class="rooms__card__price">9 990₽ в сутки</h2>
+
+                        <img src="/asset/img/4stars.png" class="stars">
+                        <h2 class="rooms__card__feedback">65 Отзывов</h2>
+                    </div>
+                </li>
+                <li class="rooms__card">
+                    <img src="/asset/img/image(1).png" class="rooms__card__img">
+                    <div class="rooms__card__wrapper">
+                        <h2 class="rooms__card__number">№980</h2>
+                        <h2 class="rooms__card__price">8 500₽ в сутки</h2>
+
+                        <img src="/asset/img/3stars.png" class="stars">
+                        <h2 class="rooms__card__feedback">35 Отзывов</h2>
+                    </div>
+                </li>
+                <li class="rooms__card">
+                    <img src="/asset/img/image(2).png" class="rooms__card__img">
+                    <div class="rooms__card__wrapper">
+                        <h2 class="rooms__card__number">№856</h2>
+                        <h2 class="rooms__card__price">7 300₽ в сутки</h2>
+
+                        <img src="/asset/img/5star.png" class="stars">
+                        <h2 class="rooms__card__feedback">19 Отзывов</h2>
+                    </div>
+                </li>
+                <li class="rooms__card">
+                    <img src="/asset/img/image(3).png" class="rooms__card__img">
+                    <div class="rooms__card__wrapper">
+                        <h2 class="rooms__card__number">№740</h2>
+                        <h2 class="rooms__card__price">6 000₽ в сутки</h2>
+
+                        <img src="/asset/img/4stars.png" class="stars">
+                        <h2 class="rooms__card__feedback">44 Отзывов</h2>
+                    </div>
+                </li>
+                <li class="rooms__card">
+                    <img src="/asset/img/image(4).png" class="rooms__card__img">
+                    <div class="rooms__card__wrapper">
+                        <h2 class="rooms__card__number">№982</h2>
+                        <h2 class="rooms__card__price">5 800₽ в сутки</h2>
+
+                        <img src="/asset/img/3stars.png" class="stars">
+                        <h2 class="rooms__card__feedback">56 Отзывов</h2>
+                    </div>
+                </li>
+                <li class="rooms__card">
+                    <img src="/asset/img/image(5).png" class="rooms__card__img">
+                    <div class="rooms__card__wrapper">
+                        <h2 class="rooms__card__number">№678</h2>
+                        <h2 class="rooms__card__price">5 500₽ в сутки</h2>
+
+                        <img src="/asset/img/5star.png" class="stars">
+                        <h2 class="rooms__card__feedback">45 Отзывов</h2>
+                    </div>
+                </li>
+                <li class="rooms__card">
+                    <img src="/asset/img/image(6).png" class="rooms__card__img">
+                    <div class="rooms__card__wrapper">
+                        <h2 class="rooms__card__number">№450</h2>
+                        <h2 class="rooms__card__price">5 300₽ в сутки</h2>
+
+                        <img src="/asset/img/4stars.png" class="stars">
+                        <h2 class="rooms__card__feedback">39 Отзывов</h2>
+                    </div>
+                </li>
+                <li class="rooms__card">
+                    <img src="/asset/img/image(7).png" class="rooms__card__img">
+                    <div class="rooms__card__wrapper">
+                        <h2 class="rooms__card__number">№350</h2>
+                        <h2 class="rooms__card__price">5 000₽ в сутки</h2>
+
+                        <img src="/asset/img/3stars.png" class="stars">
+                        <h2 class="rooms__card__feedback">77 Отзывов</h2>
+                    </div>
+                </li>
+                <li class="rooms__card">
+                    <img src="/asset/img/image(8).png" class="rooms__card__img">
+                    <div class="rooms__card__wrapper">
+                        <h2 class="rooms__card__number">№666</h2>
+                        <h2 class="rooms__card__price">5 000₽ в сутки</h2>
+
+                        <img src="/asset/img/5star.png" class="stars">
+                        <h2 class="rooms__card__feedback">25 Отзывов</h2>
+                    </div>
+                </li>
+                <li class="rooms__card">
+                    <img src="/asset/img/image(9).png" class="rooms__card__img">
+                    <div class="rooms__card__wrapper">
+                        <h2 class="rooms__card__number">№352</h2>
+                        <h2 class="rooms__card__price">5 000₽ в сутки</h2>
+
+                        <img src="/asset/img/3stars.png" class="stars">
+                        <h2 class="rooms__card__feedback">55 Отзывов</h2>
+                    </div>
+                </li>
+                <li class="rooms__card">
+                    <img src="/asset/img/image(10).png" class="rooms__card__img">
+                    <div class="rooms__card__wrapper">
+                        <h2 class="rooms__card__number">№444</h2>
+                        <h2 class="rooms__card__price">5 000₽ в сутки</h2>
+
+                        <img src="/asset/img/3stars.png" class="stars">
+                        <h2 class="rooms__card__feedback">15 Отзывов</h2>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <footer class="footer">
+        <div class="container footer__wrapper">
+            <div class="footer__column__first">
+                <div class="footer__logo">
+                    <img src="/asset/img/Logo.svg" alt="" class="footer__logo-img logo">
+                </div>
+                <p class="footer__award">
+                    Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+                </p>
+            </div>
+            <div class="footer__column">
+                <ul class="footer__list">
+                    <li class="footer__item footer__item__title">навигация</li>
+                    <li class="footer__item">О нас</li>
+                    <li class="footer__item">Новости</li>
+                    <li class="footer__item">Служба поддержки</li>
+                    <li class="footer__item">Услуги</li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <ul class="footer__list">
+                    <li class="footer__item footer__item__title">о нас</li>
+                    <li class="footer__item">О сервисе</li>
+                    <li class="footer__item">Наша команда</li>
+                    <li class="footer__item">Вакансии</li>
+                    <li class="footer__item">Инвесторы</li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <ul class="footer__list">
+                    <li class="footer__item footer__item__title">Служба поддержки</li>
+                    <li class="footer__item">Соглашения</li>
+                    <li class="footer__item">Сообщества</li>
+                    <li class="footer__item">Связь с нами</li>
+                </ul>
+            </div>
+            <div class="footer__column__last">
+                <ul class="footer__list">
+                    <li class="footer__item footer__item__title">Подписка</li>
+                    <li class="footer__item footer__item__special">Получайте специальные предложения и новости сервиса</li>
+                    <input type="email" class="footer__subscription" placeholder="Email">
+                </ul>
+
+            </div>
+        </div>
+        <hr class="footer__line">
+        <div class="container">
+            <div class="footer__underline">
+                <p class="footer__copyright">Copyright © 2018 Toxin отель. Все права защищены.</p>
+                <ul class="social">
+                    <li class="social__item">
+                        <a href="" class="social__link">
+                            <img src="/asset/img/facebook.svg" alt="" class="social__img">
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="" class="social__link">
+                            <img src="/asset/img/inst.svg" alt="" class="social__img">
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="" class="social__link">
+                            <img src="/asset/img/twitter.svg" alt="" class="social__img">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="slider.js"></script>
+</body></html>

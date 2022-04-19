@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toxin</title>
+    <link rel="stylesheet" href="/asset/css/style.css">
+    <link rel="stylesheet" href="/asset/css/resize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__wrapper">
+            <div class="header__logo">
+                <a href="index.html" class="header__logo__link"><img src="/asset/img/Logo.svg" alt="" class="header__logo-img logo"></a>
+            </div>
+            <div class="nav__wrapper">
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li class="header__item"><a href="#" class="header__item__link">О нас</a></li>
+                        <li class="header__item"><a href="#" class="header__item__link">Услуги</a></li>
+                        <li class="header__item"><a href="#" class="header__item__link">Вакансии</a></li>
+                        <li class="header__item"><a href="#" class="header__item__link">Новости</a></li>
+                        <li class="header__item"><a href="#" class="header__item__link">Соглашения</a></li>
+                    </ul>
+                </nav>
+                <div class="hamburger-menu">
+                    <input id="menu__toggle" type="checkbox" />
+                    <label class="menu__btn" for="menu__toggle">
+                        <span></span>
+                    </label>
+                    <ul class="menu__box">
+                        <li>
+                            <a class="menu__item" href="#">О нас</a>
+                        </li>
+                        <li>
+                            <a class="menu__item" href="#">Услуги</a>
+                        </li>
+                        <li>
+                            <a class="menu__item" href="#">Вакансии</a>
+                        </li>
+                        <li>
+                            <a class="menu__item" href="#">Новости</a>
+                        </li>
+                        <li>
+                            <a class="menu__item" href="#">Соглашения</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__buttons">
+                    <button class="header__login-btn"><a class="header__login__link">войти</a></button>
+                    <button class="header__logon-btn"><a class="header__login__link">зарегистрироваться</a></button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="main">
+        <div class="container">
+            <form action="index2.html" class="main__form">
+                <h1 class="form__title">Найдём номера под ваши пожелания</h1>
+                <div class="form__inputs__wrapper">
+                    <div class="form__input__wrapper">
+                        <lable class="input__lable" for="arrival">прибытие</lable>
+                        <input type="text" id="my-element" class="form__arrival form__short" id="arrival" value="ДД.ММ.ГГГГ">
+                    </div>
+                    <div class="form__input__wrapper">
+                        <lable class="input__lable" for="departure">выезд</lable>
+                        <input type="text" id="my-element" class="form__departure form__short" id="departure" value="ДД.ММ.ГГГГ">
+                    </div>
+                </div>
+                <lable class="input__lable" for="guests">гости</lable>
+                <input type="number" class="form__guests" id="guests" placeholder="Сколько гостей">
+                <button class="form__button" type="submit"><a class="form__button__link">подобрать номер</a></button>
+            </form>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container footer__wrapper">
+            <div class="footer__column__first">
+                <div class="footer__logo">
+                    <img src="/asset/img/Logo.svg" alt="" class="footer__logo-img logo">
+                </div>
+                <p class="footer__award">
+                    Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+                </p>
+            </div>
+            <div class="footer__column">
+                <ul class="footer__list">
+                    <li class="footer__item footer__item__title">навигация</li>
+                    <li class="footer__item">О нас</li>
+                    <li class="footer__item">Новости</li>
+                    <li class="footer__item">Служба поддержки</li>
+                    <li class="footer__item">Услуги</li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <ul class="footer__list">
+                    <li class="footer__item footer__item__title">о нас</li>
+                    <li class="footer__item">О сервисе</li>
+                    <li class="footer__item">Наша команда</li>
+                    <li class="footer__item">Вакансии</li>
+                    <li class="footer__item">Инвесторы</li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <ul class="footer__list">
+                    <li class="footer__item footer__item__title">Служба поддержки</li>
+                    <li class="footer__item">Соглашения</li>
+                    <li class="footer__item">Сообщества</li>
+                    <li class="footer__item">Связь с нами</li>
+                </ul>
+            </div>
+            <div class="footer__column__last">
+                <ul class="footer__list">
+                    <li class="footer__item footer__item__title">Подписка</li>
+                    <li class="footer__item footer__item__special">Получайте специальные предложения и новости сервиса</li>
+                    <input type="email" class="footer__subscription" placeholder="Email">
+                </ul>
+            </div>
+        </div>
+        <hr class="footer__line">
+        <div class="container">
+            <div class="footer__underline">
+                <p class="footer__copyright">Copyright © 2018 Toxin отель. Все права защищены.</p>
+                <ul class="social">
+                    <li class="social__item">
+                        <a href="" class="social__link">
+                            <img src="/asset/img/facebook.svg" alt="" class="social__img">
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="" class="social__link">
+                            <img src="/asset/img/inst.svg" alt="" class="social__img">
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="" class="social__link">
+                            <img src="/asset/img/twitter.svg" alt="" class="social__img">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/ru.js"></script>
+    <script src="script.js"></script>
+    <script>
+        flatpickr("#my-element", {
+            "locale": "ru"
+        });
+    </script>
+</body></html>
